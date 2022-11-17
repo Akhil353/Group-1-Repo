@@ -4,21 +4,21 @@
 
 package frc.robot.commands;
 
-import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.Intake;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
-public class ExampleCommand extends CommandBase {
+public class Commands extends CommandBase {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final ExampleSubsystem m_subsystem;
+  private final Intake intake;
 
   /**
-   * Creates a new ExampleCommand.
+   * Creates a new DoubleSolenoid.
    *
    * @param subsystem The subsystem used by this command.
    */
-  public ExampleCommand(ExampleSubsystem subsystem) {
-    m_subsystem = subsystem;
+  public Commands(Intake subsystem) {
+    intake = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
@@ -43,5 +43,5 @@ public class ExampleCommand extends CommandBase {
 }
 
 /*    if (pilot.getYButtonPressed()) {
-      DoubleSolenoid.set(Value.kForward);
-      DoubleSolenoid.toggle(); */
+     DoubleSolenoid.set(Value.kForward);
+     DoubleSolenoid.toggle(); */

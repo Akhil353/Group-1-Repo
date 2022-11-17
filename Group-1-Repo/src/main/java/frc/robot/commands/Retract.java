@@ -8,16 +8,16 @@ import frc.robot.subsystems.Intake;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
-public class Solenoids extends CommandBase {
+public class Retract extends CommandBase {
     @SuppressWarnings({ "PMD.UnusedPrivateField", "PMD.SingularField" })
     private final Intake intake;
 
     /**
-     * Creates a new Solenoids.
+     * Creates a new Retract.
      *
      * @param subsystem The subsystem used by this command.
      */
-    public Solenoids(Intake subsystem) {
+    public Retract(Intake subsystem) {
         intake = subsystem;
         // Use addRequirements() here to declare subsystem dependencies.
         addRequirements(subsystem);

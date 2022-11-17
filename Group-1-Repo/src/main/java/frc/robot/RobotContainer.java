@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+import com.fasterxml.jackson.annotation.JsonSetter.Value;
+
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.GenericHID;
 //import edu.wpi.first.wpilibj.Joystick;
@@ -23,7 +25,6 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   // private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   // private final DriveTrain m_DriveTrain = new DriveTrain();
-  private final Drivetrain drivetrain = new Drivetrain();
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -43,10 +44,11 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
     XboxController pilot = new XboxController(0); // create the controller w/the port
+    // JoystickButton A = new JoystickButton(pilot, Button.kA.Value);
+    // A.whenHeld(new )
 
-    if ()
+    }
 
-  }
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

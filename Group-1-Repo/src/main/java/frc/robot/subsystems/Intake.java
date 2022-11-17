@@ -35,8 +35,6 @@ public class Intake extends SubsystemBase {
 
     /** Creates a new Intake. */
     public Intake() {
-        DoubleSolenoid.set(Value.kOff); //starts as off initially
-        if ()   
     }
 
     @Override

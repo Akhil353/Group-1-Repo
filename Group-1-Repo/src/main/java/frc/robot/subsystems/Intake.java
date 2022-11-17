@@ -5,6 +5,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
@@ -21,12 +22,25 @@ public class Intake extends SubsystemBase {
     // double current = Compressor.getCurrent();
 
     //creates object for the solenoids and the required channels for extend and retract movement
-    DoubleSolenoid DoubleSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);
+    //two objects since two different solenoids
+    DoubleSolenoid DoubleSolenoid1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);
+    DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);
     
+    //default solenoid state for both solenoids
+    DoubleSolenoid1.set(Value.kOff); 
+    DoubleSolenoid2.set(Value.kOff);
 
-    // DoubleSolenoid.set(kOff);
-    // DoubleSolenoid.set(kForward);
-    // DoubleSolenoid.set(kReverse);
+    //extend and retract functions for both solenoids
+    public void intakeExtend() { //function to extend the solenoids
+        DoubleSolenoid1.set(Value.kForward);
+        DoubleSolenoid2.set(Value.kForward);
+    }
+
+    public void intakeRetract() { //function to retract the solenoids
+        DoubleSolenoid1.set(Value.kReverse);
+        DoubleSolenoid2.set(Value.kReverse);
+
+    }
 
     /** Creates a new Intake. */
     public Intake() {

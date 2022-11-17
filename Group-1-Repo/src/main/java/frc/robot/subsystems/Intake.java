@@ -5,7 +5,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
-import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value*;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
@@ -27,7 +27,7 @@ public class Intake extends SubsystemBase {
     DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);
     
     //default solenoid state for both solenoids
-    DoubleSolenoid1.set(Value.kOff); 
+    DoubleSolenoid1.set(Value.kOff);
     DoubleSolenoid2.set(Value.kOff);
 
     //extend and retract functions for both solenoids

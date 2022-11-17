@@ -16,9 +16,9 @@ public class Intake extends SubsystemBase {
     //calls the compressor (CTRE because the robot uses that)
     
     //this should query the results and status of the compressor
-    boolean enabled = Compressor.enabled();
-    boolean pressureSwitch = Compressor.getPressureSwitchValue();
-    double current = Compressor.getCurrent();
+    // boolean enabled = Compressor.enabled();
+    // boolean pressureSwitch = Compressor.getPressureSwitchValue();
+    // double current = Compressor.getCurrent();
 
     //creates object for the solenoids and the required channels for extend and retract movement
     DoubleSolenoid DoubleSolenoid = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);

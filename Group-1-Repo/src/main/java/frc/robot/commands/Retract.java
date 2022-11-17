@@ -17,10 +17,12 @@ public class Retract extends CommandBase {
      *
      * @param subsystem The subsystem used by this command.
      */
-    public Retract(Intake subsystem) {
-        intake = subsystem;
+
+    //dependencies and stuff
+    public Retract(Intake intake) {
+        this.intake = intake;
         // Use addRequirements() here to declare subsystem dependencies.
-        addRequirements(subsystem);
+        addRequirements(intake);
     }
 
     // Called when the command is initially scheduled.
@@ -31,6 +33,7 @@ public class Retract extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
+        intake.intakeRetract(); // this is the function for retracting the solenoids
     }
 
     // Called once the command ends or is interrupted.

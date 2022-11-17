@@ -17,10 +17,12 @@ public class Extend extends CommandBase {
      *
      * @param subsystem The subsystem used by this command.
      */
-    public Extend(Intake subsystem) { //DO NOT CHANGE ANYTHING IN HERE
-        intake = subsystem; //DO NOT CHANGE THIS
+
+     //this function is just for dependencies and stuff
+    public Extend(Intake subsystem) {
+        this.intake = intake; 
         // Use addRequirements() here to declare subsystem dependencies.
-        addRequirements(subsystem);
+        addRequirements(intake);
     }
 
     // Called when the command is initially scheduled.
@@ -31,6 +33,7 @@ public class Extend extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
+        intake.intakeExtend(); //this is the function for extending the solenoids
     }
 
     // Called once the command ends or is interrupted.

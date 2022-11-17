@@ -19,7 +19,7 @@ public class Extend extends CommandBase {
      */
 
      //this function is just for dependencies and stuff
-    public Extend(Intake subsystem) {
+    public Extend(Intake intake) {
         this.intake = intake; 
         // Use addRequirements() here to declare subsystem dependencies.
         addRequirements(intake);

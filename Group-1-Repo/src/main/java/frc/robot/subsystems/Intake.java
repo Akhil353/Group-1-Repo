@@ -7,13 +7,14 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 //double solenoids mean that you can extend AND retract the solenoid
 //this is what the robot uses
 
 public class Intake extends SubsystemBase {
-    Compressor Compressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
+    Compressor Compressor = new Compressor(Constants.compressor, PneumaticsModuleType.CTREPCM);
     //calls the compressor (CTRE because the robot uses that)
     
     //this should query the results and status of the compressor
@@ -23,8 +24,8 @@ public class Intake extends SubsystemBase {
 
     //creates object for the solenoids and the required channels for extend and retract movement
     //two objects since two different solenoids
-    DoubleSolenoid DoubleSolenoid1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);
-    DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 1, 2);
+    DoubleSolenoid DoubleSolenoid1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
+    DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
     
     //default solenoid state for both solenoids
     DoubleSolenoid1.set(Value.kOff);

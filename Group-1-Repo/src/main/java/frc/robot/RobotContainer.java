@@ -4,12 +4,11 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.GenericHID;
 //import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.commands.TankDrive;
-import frc.robot.subsystems.Drivetrain;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -45,10 +44,8 @@ public class RobotContainer {
   private void configureButtonBindings() {
     XboxController pilot = new XboxController(0); // create the controller w/the port
 
-    // lambda
+    if ()
 
-    // no more m_drivetrain
-    drivetrain.setDefaultCommand(new TankDrive(drivetrain, pilot::getLeftY, pilot::getRightY));
   }
 
   /**

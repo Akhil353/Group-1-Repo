@@ -17,8 +17,8 @@ public class Extend extends CommandBase {
      *
      * @param subsystem The subsystem used by this command.
      */
-    public Extend(Intake subsystem) {
-        intake = subsystem;
+    public Extend(Intake subsystem) { //DO NOT CHANGE ANYTHING IN HERE
+        intake = subsystem; //DO NOT CHANGE THIS
         // Use addRequirements() here to declare subsystem dependencies.
         addRequirements(subsystem);
     }

@@ -12,6 +12,11 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 
+//imports for subsystem and commands;
+import frc.robot.commands.Extend;
+import frc.robot.commands.Retract;
+import frc.robot.subsystems.Intake;
+
 /**
  * This class is where the bulk of the robot should be declared. Since
  * Command-based is a
@@ -22,6 +27,12 @@ import edu.wpi.first.wpilibj2.command.Command;
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
+  //stuff to add functionality to the intake and the extend commands
+  private final Intake intake = new Intake(); //subsystem definition
+
+  //command definitions
+  private final Extend extend = new Extend(intake);
+  private final Retract retract = new Retract(intake);
   // The robot's subsystems and commands are defined here...
   // private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   // private final DriveTrain m_DriveTrain = new DriveTrain();

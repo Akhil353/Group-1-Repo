@@ -4,9 +4,6 @@
 
 package frc.robot;
 
-import com.fasterxml.jackson.annotation.JsonSetter.Value;
-
-import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.GenericHID;
 //import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;

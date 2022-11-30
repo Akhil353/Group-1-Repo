@@ -28,7 +28,7 @@ public class Intake extends SubsystemBase {
     DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
     
     //default solenoid state for both solenoids
-    Intake () {
+    public Intake () {
         DoubleSolenoid1.set(Value.kOff);
         DoubleSolenoid2.set(Value.kOff);
     }

@@ -28,8 +28,10 @@ public class Intake extends SubsystemBase {
     DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
     
     //default solenoid state for both solenoids
-    DoubleSolenoid1.set(Value.kOff);
-    DoubleSolenoid2.set(Value.kOff);
+    Intake () {
+        DoubleSolenoid1.set(Value.kOff);
+        DoubleSolenoid2.set(Value.kOff);
+    }
 
     //extend and retract functions for both solenoids
     public void intakeExtend() { //function to extend the solenoids
@@ -40,12 +42,8 @@ public class Intake extends SubsystemBase {
     public void intakeRetract() { //function to retract the solenoids
         DoubleSolenoid1.set(Value.kReverse);
         DoubleSolenoid2.set(Value.kReverse);
-
     }
 
-    /** Creates a new Intake. */
-    public Intake() {
-    }
 
     @Override
     public void periodic() {

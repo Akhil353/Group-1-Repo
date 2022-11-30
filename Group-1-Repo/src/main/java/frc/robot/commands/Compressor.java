@@ -31,6 +31,7 @@ public class Compressor extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
+        //compressor code goes here?
     }
 
     // Called once the command ends or is interrupted.

@@ -53,8 +53,13 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
     XboxController pilot = new XboxController(0); // create the controller w/the port
-    JoystickButton A = new JoystickButton(pilot, Button.kA.Value); //use the A button
-    A.whenPressed(extend);
+    JoystickButton A = new JoystickButton(pilot, Button.kA.Value); //map the A button
+    JoystickButton B = new JoystickButton(pilot, Button.kB.Value); // map the B button
+    
+    A.whenPressed(extend); //when you press A, it'll use the extend command
+    B.whenPressed(retract); // when you press B, it'll use the retract command
+
+    
 
     }
 

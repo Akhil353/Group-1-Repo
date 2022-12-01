@@ -37,6 +37,7 @@ public class Intake extends SubsystemBase {
     public void intakeExtend() { //function to extend the solenoids
         DoubleSolenoid1.set(Value.kForward);
         DoubleSolenoid2.set(Value.kForward);
+        //add neomotor code here
     }
 
     public void intakeRetract() { //function to retract the solenoids

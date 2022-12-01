@@ -27,10 +27,10 @@ public class Intake extends SubsystemBase {
     //creates object for the solenoids and the required channels for extend and retract movement
     //two objects since two different solenoids
     private DoubleSolenoid DoubleSolenoid1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
-    private DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
+    private DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel2, Constants.reverseChannel2);
     
 
-    private CANSparkMax neoMotor = new CANSparkMax(Constants.neo_motor, MotorType.kBrushless);
+    private CANSparkMax neoMotor = new CANSparkMax(Constants.intakeMotorId, MotorType.kBrushless);
     //default solenoid state for both solenoids
     public Intake () {
         DoubleSolenoid1.set(Value.kOff);

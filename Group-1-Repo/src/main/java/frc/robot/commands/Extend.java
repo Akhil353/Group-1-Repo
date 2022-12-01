@@ -29,13 +29,13 @@ public class Extend extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
+        intake.intakeExtend(); // this is the function for extending the solenoids
+        intake.motor(Constants.intakeMotorSpeed);
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        intake.intakeExtend(); //this is the function for extending the solenoids
-        intake.motor(Constants.motor_speed);
     }
 
     // Called once the command ends or is interrupted.

@@ -21,7 +21,11 @@ public final class Constants {
     
     public static final int forwardChannel = 1;
     public static final int reverseChannel = 2;
-    public static final int neo_motor = 0;
 
-    public static final double motor_speed = 0.5;
+    public static final int forwardChannel2 = 1;
+    public static final int reverseChannel2 = 2;
+
+    public static final int intakeMotorId = 0;
+
+    public static final double intakeMotorSpeed = 0.5;
 }

@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import com.revrobotics.CANSparkMax;
 //double solenoids mean that you can extend AND retract the solenoid
 //this is what the robot uses
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class Intake extends SubsystemBase {
     private Compressor Compressor = new Compressor(Constants.compressor, PneumaticsModuleType.CTREPCM);
@@ -29,7 +30,7 @@ public class Intake extends SubsystemBase {
     private DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
     
 
-    private CANSparkMax neoMotor = new CANSparkMax(Constants.Intake.neo_motor, MotorType.kBrushless);
+    private CANSparkMax neoMotor = new CANSparkMax(Constants.neo_motor, MotorType.kBrushless);
     //default solenoid state for both solenoids
     public Intake () {
         DoubleSolenoid1.set(Value.kOff);
@@ -46,6 +47,10 @@ public class Intake extends SubsystemBase {
     public void intakeRetract() { //function to retract the solenoids
         DoubleSolenoid1.set(Value.kReverse);
         DoubleSolenoid2.set(Value.kReverse);
+    }
+
+    public void motor() {
+        
     }
 
 

@@ -19,13 +19,14 @@ package frc.robot;
 public final class Constants {
     public static final int compressor = 0;
     
-    public static final int forwardChannel = 1;
-    public static final int reverseChannel = 2;
+    //hardware ids (id numbers so that the code knows what to control)
+    public static final int forwardChannel = 5;
+    public static final int reverseChannel = 4;
 
-    public static final int forwardChannel2 = 1;
-    public static final int reverseChannel2 = 2;
+    public static final int forwardChannel2 = 2;
+    public static final int reverseChannel2 = 3;
 
-    public static final int intakeMotorId = 0;
+    public static final int intakeMotorId = 21;
 
     public static final double intakeMotorSpeed = 0.5;
 }

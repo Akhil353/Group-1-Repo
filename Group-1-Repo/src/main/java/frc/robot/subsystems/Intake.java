@@ -10,23 +10,26 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import com.revrobotics.CANSparkMax;
 //double solenoids mean that you can extend AND retract the solenoid
 //this is what the robot uses
 
 public class Intake extends SubsystemBase {
-    Compressor Compressor = new Compressor(Constants.compressor, PneumaticsModuleType.CTREPCM);
-    //calls the compressor (CTRE because the robot uses that)
+    private Compressor Compressor = new Compressor(Constants.compressor, PneumaticsModuleType.CTREPCM);
+    // calls the compressor (CTRE because the robot uses that)
     
-    //this should query the results and status of the compressor
+    // this should query the results and status of the compressor
     // boolean enabled = Compressor.enabled();
     // boolean pressureSwitch = Compressor.getPressureSwitchValue();
     // double current = Compressor.getCurrent();
 
     //creates object for the solenoids and the required channels for extend and retract movement
     //two objects since two different solenoids
-    DoubleSolenoid DoubleSolenoid1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
-    DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
+    private DoubleSolenoid DoubleSolenoid1 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
+    private DoubleSolenoid DoubleSolenoid2 = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.forwardChannel, Constants.reverseChannel);
     
+
+    private CANSparkMax neoMotor = new CANSparkMax(Constants.Intake.neo_motor, MotorType.kBrushless);
     //default solenoid state for both solenoids
     public Intake () {
         DoubleSolenoid1.set(Value.kOff);

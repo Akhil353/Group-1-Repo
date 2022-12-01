@@ -11,8 +11,6 @@ import frc.robot.Constants;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import com.revrobotics.CANSparkMax;
-//double solenoids mean that you can extend AND retract the solenoid
-//this is what the robot uses
 
 public class Intake extends SubsystemBase {
     private Compressor Compressor = new Compressor(Constants.compressor, PneumaticsModuleType.CTREPCM);

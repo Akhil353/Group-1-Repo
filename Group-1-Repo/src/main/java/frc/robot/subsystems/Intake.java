@@ -49,8 +49,8 @@ public class Intake extends SubsystemBase {
         DoubleSolenoid2.set(Value.kReverse);
     }
 
-    public void motor() {
-        
+    public void motor(double speed) {
+        neoMotor.set(speed);
     }
 
 

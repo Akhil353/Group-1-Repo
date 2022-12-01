@@ -4,6 +4,7 @@
 
 package frc.robot.commands;
 
+import frc.robot.Constants;
 import frc.robot.subsystems.Intake;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
@@ -34,6 +35,7 @@ public class Retract extends CommandBase {
     @Override
     public void execute() {
         intake.intakeRetract(); // this is the function for retracting the solenoids
+        intake.motor(0);
     }
 
     // Called once the command ends or is interrupted.

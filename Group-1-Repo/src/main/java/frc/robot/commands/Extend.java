@@ -4,6 +4,7 @@
 
 package frc.robot.commands;
 
+import frc.robot.Constants;
 import frc.robot.subsystems.Intake;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
@@ -34,6 +35,7 @@ public class Extend extends CommandBase {
     @Override
     public void execute() {
         intake.intakeExtend(); //this is the function for extending the solenoids
+        intake.motor(Constants.motor_speed);
     }
 
     // Called once the command ends or is interrupted.

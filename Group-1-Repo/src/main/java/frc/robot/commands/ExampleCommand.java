@@ -41,3 +41,7 @@ public class ExampleCommand extends CommandBase {
     return false;
   }
 }
+
+/*    if (pilot.getYButtonPressed()) {
+      DoubleSolenoid.set(Value.kForward);
+      DoubleSolenoid.toggle(); */
